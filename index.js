@@ -88,7 +88,7 @@ function Search (sbot) {
 
 module.exports = {
   name: 'search',
-  version '0.0.0',
+  version: '0.0.0',
   manifest: {
     source: 'query',
     async: 'ready'
