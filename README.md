@@ -1,0 +1,6 @@
+# ssb-search
+
+
+## License
+
+MIT
