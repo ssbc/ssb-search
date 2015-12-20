@@ -1,5 +1,4 @@
 
-var ssbc = require('ssb-client')
 var pull = require('pull-stream')
 var explain = require('explain-error')
 
@@ -97,7 +96,7 @@ module.exports = {
 }
 
 if(!module.parent)
-  ssbc(function (err, sbot) {
+  require('ssb-client')(function (err, sbot) {
     if(err) throw explain(err, 'could not connect to sbot')
     var search = Search(sbot)
     search.ready(function (){
@@ -114,4 +113,5 @@ if(!module.parent)
       )
     })
   })
+
 
