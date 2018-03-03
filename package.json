@@ -1,7 +1,7 @@
 {
   "name": "ssb-search",
   "description": "",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "homepage": "https://github.com/dominictarr/ssb-search",
   "repository": {
     "type": "git",
