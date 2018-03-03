@@ -8,8 +8,7 @@
     "url": "git://github.com/dominictarr/ssb-search.git"
   },
   "dependencies": {
-    "explain-error": "^1.0.1",
-    "pull-stream": "^3.0.1"
+    "flumeview-search": "^1.0.0"
   },
   "devDependencies": {
     "ssb-client": "^2.0.0"
