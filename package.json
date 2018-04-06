@@ -2,10 +2,10 @@
   "name": "ssb-search",
   "description": "",
   "version": "1.1.0",
-  "homepage": "https://github.com/dominictarr/ssb-search",
+  "homepage": "https://github.com/ssbc/ssb-search",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dominictarr/ssb-search.git"
+    "url": "git://github.com/ssbc/ssb-search.git"
   },
   "dependencies": {
     "flumeview-search": "^1.0.0",
@@ -22,3 +22,5 @@
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
   "license": "MIT"
 }
+
+
