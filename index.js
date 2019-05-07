@@ -5,7 +5,11 @@ var msgs = require('ssb-msgs')
 
 exports.name = 'search'
 exports.version = '2.0.0'
-exports.manifest = { query: 'source' }
+exports.manifest = { query: 'source', help: 'sync' }
+
+function isString (s) {
+  return 'string' === typeof s
+}
 
 exports.init = function (sbot) {
   var search = sbot._flumeUse('search', FlumeViewSearch(13, 3, function (data) {
@@ -14,12 +18,14 @@ exports.init = function (sbot) {
   return {
     query: function (opts) {
       opts = opts || {}
-
+      if(!isString(opts.query)) return pull.values([])
+      console.error('search:', opts)
       return pullCont(function (cb) {
         var keys = {}
         pull(
           search.query({query: opts.query}),
           pull.drain(function (data) {
+            console.log('found:', data.key)
             keys[data.key] = data.value
           }, function () {
             var counts = {}
@@ -46,14 +52,8 @@ exports.init = function (sbot) {
           })
         )
       })
-    }
+    },
+    help: function () { return require('./help') }
   }
 }
-
-
-
-
-
-
-
 
