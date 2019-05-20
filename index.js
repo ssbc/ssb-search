@@ -19,13 +19,11 @@ exports.init = function (sbot) {
     query: function (opts) {
       opts = opts || {}
       if(!isString(opts.query)) return pull.values([])
-      console.error('search:', opts)
       return pullCont(function (cb) {
         var keys = {}
         pull(
           search.query({query: opts.query}),
           pull.drain(function (data) {
-            console.log('found:', data.key)
             keys[data.key] = data.value
           }, function () {
             var counts = {}
