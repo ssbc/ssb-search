@@ -4,7 +4,7 @@ module.exports = {
   commands: {
     query: {
       type: 'source',
-      description: 'perform a search query'
+      description: 'perform a search query',
       args: {
         query: 'search terms, space separated'
       }
