@@ -8,7 +8,7 @@
     "url": "git://github.com/ssbc/ssb-search.git"
   },
   "dependencies": {
-    "flumeview-search": "^1.0.0",
+    "flumeview-search": "^2.0.0",
     "pull-cont": "^0.1.1",
     "pull-stream": "^3.6.7",
     "ssb-msgs": "^5.2.0"

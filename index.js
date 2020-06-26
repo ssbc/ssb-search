@@ -11,8 +11,11 @@ function isString (s) {
   return 'string' === typeof s
 }
 
+const VERSION = 14
+const MIN_LENGTH = 3
+
 exports.init = function (sbot) {
-  var search = sbot._flumeUse('search', FlumeViewSearch(13, 3, function (data) {
+  var search = sbot._flumeUse('search', FlumeViewSearch(VERSION, MIN_LENGTH, function (data) {
     return data.value.content.text
   }))
   return {
